@@ -1,3 +1,5 @@
+import random
+
 class Card:
     def __init__(self, suit, value):
         self.suit = suit
@@ -11,10 +13,13 @@ class Deck:
         self.cards = [Card(suit, value) for suit in ['Hearts', 'Diamonds', 'Clubs', 'Spades']
                       for value in ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']]
 
-        
     def shuffle(self):
-        self.cards = self.cards[::-1]
-        
+        # Fisher-Yates Shuffle Algorithm
+        n = len(self.cards)
+        for i in range(n - 1, 0, -1):
+            j = random.randint(0, i)
+            self.cards[i], self.cards[j] = self.cards[j], self.cards[i]
+
     def deal(self):
         return self.cards.pop()
     
