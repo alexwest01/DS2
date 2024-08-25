@@ -1,0 +1,22 @@
+How many players? 3
+Enter starting funds for each player: 100
+Traceback (most recent call last):
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_4_Betting.py", line 107, in <module>
+    main()
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_4_Betting.py", line 103, in main    
+    game = Game(players, starting_funds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_4_Betting.py", line 3, in __init__  
+    self.players = [{'hand': Hand(), 'funds': starting_funds, 'bet': 0} for _ in range(players)]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_4_Betting.py", line 3, in <listcomp>
+    self.players = [{'hand': Hand(), 'funds': starting_funds, 'bet': 0} for _ in range(players)]
+                             ^^^^
+NameError: name 'Hand' is not defined
+
+
+------------------------------------
+
+The error message, NameError: name 'Hand' is not defined, occurs because the Hand class is being used before it's defined. In Python, all class definitions need to be declared before they are used in the code.
+
+To fix this error, the Hand class should be defined before using it in the Game class.
