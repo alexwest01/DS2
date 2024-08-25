@@ -1,0 +1,18 @@
+How many players? 3
+Enter starting funds for each player: 100
+Starting a game of Blackjack!
+Traceback (most recent call last):
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_3_Blackjack.py", line 134, in <module>   
+    main()
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_3_Blackjack.py", line 131, in main       
+    game.start_game()
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_3_Blackjack.py", line 61, in start_game  
+    self.initial_deal()
+  File "c:\Users\Your PC\Documents\Academic Studies\DTS SE\DSA\DSA2\Card Game\CardGameLocal_3_Blackjack.py", line 76, in initial_deal
+    player['hand'].add_card(self.deck.deal())
+                            ^^^^^^^^^^^^^^
+AttributeError: 'Deck' object has no attribute 'deal'
+
+----------------------------------------------
+
+The error is due to the fact that the Deck class does not have the deal() method properly defined. This issue stems from either the method being incorrectly implemented or the method not being recognized by the Deck class.
